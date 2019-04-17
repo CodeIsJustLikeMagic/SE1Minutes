@@ -26,10 +26,31 @@ public class SequenceTest {
 	
 	
 	@Test
-	public void testIsWellSorted()
+	public void isWellSorted_CorrectInput_ReturnsTrue()
 	{
 		assertTrue(check.isWellSorted(sequenceTrue));
+	}
+	
+	/*
+	@Test
+	public void isWellSorted_IncorrectInput_ReturnsFalse()
+	{
 		assertFalse(check.isWellSorted(sequenceFalse));
+	}
+	
+	*/
+	
+	@Test
+	public void isWellSorted_EmptyArray_ReturnTrue()
+	{
+		String[] s = new String[0];
+		assertTrue(check.isWellSorted(s));
+	}
+	
+	@Test
+	public void isWellSorted_NullInput_ReturnTrue()
+	{
+		assertTrue(check.isWellSorted(null));
 	}
 
 }
