@@ -17,7 +17,7 @@ public class SequenceTest {
 	{
 		String[][] dependencies = new String[][] {{"A", "B"}, {"B", "C"}, {"D", "B"}};
 		sequenceTrue = new String[] {"A", "D", "B", "C"};
-		sequenceFalse = new String[] {"B", "A", "C", "D"};
+		sequenceFalse = new String[] {"C", "A", "B", "D"};
 		
  		check = new SequenceCheck();
 		check.setDependencies(dependencies);
@@ -31,14 +31,14 @@ public class SequenceTest {
 		assertTrue(check.isWellSorted(sequenceTrue));
 	}
 	
-	/*
+	
 	@Test
 	public void isWellSorted_IncorrectInput_ReturnsFalse()
 	{
 		assertFalse(check.isWellSorted(sequenceFalse));
 	}
 	
-	*/
+	
 	
 	@Test
 	public void isWellSorted_EmptyArray_ReturnTrue()
@@ -51,6 +51,13 @@ public class SequenceTest {
 	public void isWellSorted_NullInput_ReturnTrue()
 	{
 		assertTrue(check.isWellSorted(null));
+	}
+	
+	@Test
+	public void isWellSorted_SameInputTwice_ReturnTrue()
+	{
+		String[] sequence = new String[] {"A", "A", "D", "B", "D", "C" };
+		assertTrue(check.isWellSorted(sequence));
 	}
 
 }
