@@ -35,7 +35,26 @@ public class DemoServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		out.println( sum );
 		System.out.println( "sum = " + sum );
-		} else {
+		}
+		if ("fun".equals( command ) && "ave".equals( param )){
+			int timeAve = getPersistentTAve();
+			Float ave = getPersistentAverage();
+			response.setContentType("text/html");
+			PrintWriter out = response.getWriter();
+			out.println("Average time: " + timeAve  + "			");
+			out.println("Average Price: " + ave);
+			System.out.println( "TimeAverage = " + timeAve );
+			System.out.println( "Average Price = " + ave );
+		}
+		if ("fun".equals( command ) && "sti".equals( param )){
+			int shortestTime = getPersistentShortestTime();
+			response.setContentType("text/html");
+			PrintWriter out = response.getWriter();
+			out.println( shortestTime );
+			System.out.println( "Shortest Time = " + shortestTime );
+		}
+		
+		else {
 		System.out.println( "Invalid Command: " + request.getQueryString() );
 		}
 	}
@@ -45,6 +64,11 @@ public class DemoServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Float sum = getPersistentSum();
+		Float ave = getPersistentAverage();
+		int tAve = getPersistentTAve();
+		int sti = getPersistentShortestTime();
+		int cars = getPersistentAmountCars();
+		int time = getPersistentTime();
 		String body = getBody( request ); System.out.println( body );
 		String[] params = body.split(",");
 		String event = params[0];
@@ -53,8 +77,21 @@ public class DemoServlet extends HttpServlet {
 		// strip € in front, parse the number behind
 		float price = Float.parseFloat( priceString.split(" ")[2] );
 		sum += price;
+		cars++;
+		time += Integer.parseInt(params[4]);
+		ave = sum/cars;
+		tAve = time/cars;
+		if(sti > Integer.parseInt(params[4]) || sti == 0) {
+			sti = Integer.parseInt(params[4]);
+			getApplication().setAttribute("sti", sti);
+		}
+		
 		// store sum persistently in ServletContext
 		getApplication().setAttribute("sum", sum );
+		getApplication().setAttribute("car", cars);
+		getApplication().setAttribute("ave", ave);
+		getApplication().setAttribute("tAve", tAve);
+		getApplication().setAttribute("time", time);
 		}
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
@@ -97,19 +134,43 @@ public class DemoServlet extends HttpServlet {
 	}
 	
 	private Float getPersistentAverage() {
-		Float sum;
+		Float average;
 		ServletContext application = getApplication();
-		sum = (Float)application.getAttribute("ave");
-		if ( sum == null ) sum = 0.0f;
-		return sum;
+		average = (Float)application.getAttribute("ave");
+		if ( average == null ) average = 0.0f;
+		return average;
 	}
 	
-	private Float getPersistentShortestTime() {
-		Float sum;
+	private int getPersistentTAve() {
+		Integer average;
 		ServletContext application = getApplication();
-		sum = (Float)application.getAttribute("sti");
-		if ( sum == null ) sum = 0.0f;
-		return sum;
+		average = (Integer)application.getAttribute("tAve");
+		if ( average == null ) average = 0;
+		return (int) average;
+	}
+	
+	private int getPersistentShortestTime() {
+		Integer sTime;
+		ServletContext application = getApplication();
+		sTime = (Integer)application.getAttribute("sti");
+		if ( sTime == null ) sTime = 0;
+		return (int) sTime;
+	}
+	
+	private int getPersistentAmountCars() {
+		Integer cars;
+		ServletContext application = getApplication();
+		cars = (Integer)application.getAttribute("car");
+		if ( cars == null ) cars = 0;
+		return (int) cars;
+	}
+	
+	private int getPersistentTime() {
+		Integer time;
+		ServletContext application = getApplication();
+		time = (Integer)application.getAttribute("time");
+		if ( time == null ) time = 0;
+		return (int) time;
 	}
 
 }
