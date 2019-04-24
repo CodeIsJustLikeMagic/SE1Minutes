@@ -26,13 +26,15 @@ public class DemoServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		
 		//an den browser geschickt
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		out.println("holo it's me");
+		out.println("Hello World!");
 		
 		//Server Console ausgabe
 		System.out.println("Hello World!"); 
