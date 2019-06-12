@@ -8,5 +8,7 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="D:/Meine Dateien/Studium/4. Semester/Software Engineering 1/SE1Minutes/junit-4.13-beta-2.jar"/>
 	<classpathentry kind="lib" path="D:/Meine Dateien/Studium/4. Semester/Software Engineering 1/SE1Minutes/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Jan/Desktop/jsonp_1.1_api.zip"/>
+	<classpathentry kind="lib" path="C:/Users/Jan/Desktop/jsonp_1.1_api/main/java/javax"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

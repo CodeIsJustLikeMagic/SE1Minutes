@@ -19,7 +19,7 @@ public class SequenceCheck implements SequenceCheckInterface{
 	public boolean isWellSorted(String[] sequence)
 	{
 		if(sequence != null) {
-			//copy the depenencies so we can change then as we go.
+			//copy the depenencies so we can change them as we go.
 			String[][] depCopy = copyDependencies();
 			
 			//for each Task i
@@ -34,7 +34,7 @@ public class SequenceCheck implements SequenceCheckInterface{
 						depCopy[y][0] = "";//a dependency is considered to be removed when when the prerequisite is empty
 					}
 					//if the Task is second in a dependency there is another task that has to be completed first but hasn't been completed yet.
-					//if the task had been completed the dependency would have already been remove and we wouldn't be in this if case.
+					//if the task had been completed the dependency would have already been removed and we wouldn't be in this if case.
 					else if(depCopy[y][1].equals(sequence[i]))
 					{
 						return false;
