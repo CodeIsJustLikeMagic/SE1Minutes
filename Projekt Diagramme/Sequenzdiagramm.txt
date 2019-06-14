@@ -1,0 +1,25 @@
+@startuml
+actor User
+boundary LeaveGarage
+control IsTicketPaid
+boundary OpenGate 
+database Schranke
+
+
+User -> LeaveGarage : InsertTicket
+LeaveGarage -> IsTicketPaid : CheckTicket
+alt PaidTicket
+IsTicketPaid -> OpenGate : OpenGate
+LeaveGarage <-- IsTicketPaid : TicketPaid
+User <-- LeaveGarage : Message "TicketPaid. Gate opens"
+OpenGate -> Schranke : OpenGate
+OpenGate <-- Schranke : <event> GateOpen
+IsTicketPaid <-- OpenGate : <event> GateOpen
+LeaveGarage <-- IsTicketPaid : <event> GateOpen
+User <--OpenGate : Message "Gate open. Goodbye"
+
+else No Paid Ticket
+LeaveGarage <--IsTicketPaid : TicketNotPaid
+User <-- LeaveGarage : Message "TicketNotPaid"
+end
+@enduml

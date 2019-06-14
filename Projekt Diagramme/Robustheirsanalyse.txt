@@ -1,0 +1,47 @@
+@startuml
+actor Kunde
+actor Manager
+actor Abonnent
+rectangle Schranke
+rectangle Parkautomat
+
+rectangle ParkhausSystem {
+  entity Preisinfo
+
+  boundary PayTicket
+  boundary GetTicket
+  boundary LeaveGarage
+  boundary OpenGate
+  boundary ShowMessage
+  boundary GetInformation
+
+
+  Kunde -right- PayTicket
+  Abonnent --|> Kunde
+  Abonnent -right- OpenGate
+  Kunde -right- GetTicket
+  PayTicket -right- Parkautomat
+  GetTicket -right- Schranke
+  Kunde -right- LeaveGarage
+  Kunde -right- ShowMessage
+  OpenGate -right- Schranke
+  GetInformation -left- Manager
+
+
+  control ParkhausController
+  control GetParkingTicket
+  control Payment
+  control IsTicketPaid
+
+  ParkhausController <.up. PayTicket : getPricing
+  ParkhausController ..> GetTicket
+  ParkhausController ..> Preisinfo
+  ParkhausController .left.> ShowMessage
+  Payment ..> PayTicket
+  GetParkingTicket ..> GetTicket
+  LeaveGarage ..> IsTicketPaid
+  IsTicketPaid ..> OpenGate : yes
+  IsTicketPaid ..> ShowMessage : no
+  ParkhausController ..> GetInformation
+}
+@enduml

@@ -1,0 +1,50 @@
+@startuml
+skinparam classAttributeIconSize 0
+class Parkhaus {
+  -name: String
+  -nr: Integer
+  -ampel: String
+  -belegtePlaetze: Integer
+  -schrankeoeffnet:Boolean
+}
+class AusfahrtSchranke{
+  +autoRauslassen(t: Ticket)
+}
+class Ticketautomat{
+  +berechnetParkGebuehr(t: Ticket)
+}
+class Parkdeck{
+  -belegtePlaetze: Integer
+}
+class Parkplatz{
+  -belegt: Boolean
+}
+class Eintrag{
+  -parkdauer: Integer
+  -parkgebuehr: Integer
+}
+class User {
+  -nr: Integer
+}
+class Ticket{
+  -einfahrtZeit: String
+  -bezahlt: Boolean
+  -parkGebuehr: Integer
+  -bezahlZeit: String
+}
+
+User -- Parkhaus : parkt_in >
+Parkhaus -- AusfahrtSchranke: hat >
+Parkhaus -- Ticketautomat: hat >
+Parkhaus -- Parkdeck : besteht_aus >
+Parkdeck "1..1"- "1..*"Parkplatz: hat >
+Parkhaus "1..1"-"1..*" Liste: hat >
+Liste "1..1"-"0..*" Eintrag: hat >
+Parkhaus -- Ticket: erzeugt >
+Parkhaus --- Parkausweis: erzeugt >
+Ticket <|- Parkausweis
+Ticket --- User: gehoert_zu >
+User --- Ticket: bezahlt >
+Parkausweis - Abonnent: gehoert_zu >
+User <|- Abonnent
+@enduml

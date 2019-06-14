@@ -1,0 +1,26 @@
+@startuml
+node Client {
+  node Browser {
+    package ParkhausPage {
+      () JSON
+      JSON )- [Parkhaus]
+      JSON -- [Plotly]
+      [Parkhaus] -- [web.xml]
+      [Parkhaus] -- [privateStatistics]
+      [Parkhaus] -- [parkPricesPrivat]
+      [Parkhaus] -- [PriceChecker]
+    }
+  }
+}
+() CSV as CF
+node Server {
+
+  package Statistics {
+    [Car Counter]
+    [parkPrices] -- [PriceCalculator]
+  }
+}
+CF --- [Car Counter]
+[Parkhaus] -right-( CF
+CF --- [PriceCalculator]
+@enduml

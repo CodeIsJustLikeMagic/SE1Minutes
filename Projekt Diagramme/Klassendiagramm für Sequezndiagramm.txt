@@ -1,0 +1,36 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class User {
++ ticket : Ticket
+}
+
+class Schranke {
++OpenGate()
+-GateWasOpened()
+}
+
+class LeaveGarage {
++InsertTicket(ticket : Ticket)
++DisplayMessage(message : String)
+}
+
+class TicketChecker {
++TicketPaid(ticket : Ticket)
+}
+
+class Ticket {
++paid : TimeDate
+}
+
+Ticket --o User
+Ticket --o TicketChecker
+Ticket --o LeaveGarage
+
+
+User - LeaveGarage : InsertTicket >
+LeaveGarage - TicketChecker : TicketPaid >
+TicketChecker - Schranke : OpenGate >
+
+
+@enduml
