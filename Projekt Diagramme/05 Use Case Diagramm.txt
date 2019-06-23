@@ -27,7 +27,9 @@ rectangle Parkhaus {
 
   (payForTicket) .> (payment) : include
   (payForTicket) -- Ticketautomat
-  Manager -- (getParkingInformation)
-  (getParkingInformation) --- Server
+  Manager -- (getRevenue)
+  (getRevenue) --- Server
+  Manager -- (getStatistics)
+  (getStatistics) --- Server
 }
 @enduml

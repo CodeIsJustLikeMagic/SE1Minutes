@@ -13,7 +13,8 @@ rectangle ParkhausSystem {
   boundary LeaveGarage
   boundary OpenGate
   boundary ShowMessage
-  boundary GetInformation
+  boundary GetRevenue
+  boundary GetStatistics
 
 
   Kunde -right- PayTicket
@@ -25,8 +26,8 @@ rectangle ParkhausSystem {
   Kunde -right- LeaveGarage
   Kunde -right- ShowMessage
   OpenGate -right- Schranke
-  GetInformation -left- Manager
-
+  GetRevenue -left- Manager
+  GetStatistics -left- Manager
 
   control ParkhausController
   control GetParkingTicket
@@ -42,6 +43,7 @@ rectangle ParkhausSystem {
   LeaveGarage ..> IsTicketPaid
   IsTicketPaid ..> OpenGate : yes
   IsTicketPaid ..> ShowMessage : no
-  ParkhausController ..> GetInformation
+  ParkhausController ..> GetRevenue
+  ParkhausController ..> GetStatistics
 }
 @enduml

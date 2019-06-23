@@ -1,0 +1,9 @@
+Als Abonnent des Parkhauses benötige ich einen Ausweis, um ohne Parkschein in das Parkhaus hinein fahren zu können.
+Als Kassenautomat muss ich die Uhrzeit kennen und Zugriff auf die Preislisten haben, um den Preis berechen zu können.
+Als Schranke muss ich Tickets entgegennehmen können, um die Schranke zu öffnen (wenn ein Auto das Parkhaus verlassen will).
+Als Betreiber des Parkhauses benötige ich Listen und Summen über die eingenommenen Gebühren und die Anzahl der Autos, um eine Übersicht zu bekommen.
+Als StatisticSystem muss benötige ich Listen über das Einfahren und Ausfahren von Autos um Statistiken über das Nutzerverhalten zu erstellen
+
+Neben den grundlegenden Funktionalitäten eines Parkhauses (Ticket bezahlen und ausfarhen), werden die User Stories Priorisiert, 
+die unser Parkhaus interessant machen. 
+Wie auch in dem Digitalisierungskonzept beschribeen fokussieren wir uns auf die Inhalten die ein analoges Parkhaus digital erweitern.

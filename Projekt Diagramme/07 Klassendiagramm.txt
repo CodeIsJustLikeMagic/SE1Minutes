@@ -6,9 +6,16 @@ class Parkhaus {
   -ampel: String
   -belegtePlaetze: Integer
   -schrankeoeffnet:Boolean
+  
+    +durchschnittParkdauer(): Integer
+    +meistbesuchteZeit(): String
+    +wenigstbesuchteZeit(): String
+    +einnahmen(zeitpunkt: String, zeitpunkt: String):Integer
 }
 class AusfahrtSchranke{
   +autoRauslassen(t: Ticket)
+}
+class Manager{
 }
 class Ticketautomat{
   +berechnetParkGebuehr(t: Ticket)
@@ -22,6 +29,8 @@ class Parkplatz{
 class Eintrag{
   -parkdauer: Integer
   -parkgebuehr: Integer
+  -wochentag: String
+  -einfahrtZeit: String
 }
 class User {
   -nr: Integer
@@ -31,12 +40,21 @@ class Ticket{
   -bezahlt: Boolean
   -parkGebuehr: Integer
   -bezahlZeit: String
+  
+}
+class Statistik{
+    +durchschnittParkdauer(): Integer
+    +meistbesuchteZeit(): String
+    +wenigstbesuchteZeit(): String
+    +einnahmen(zeitpunkt: String, zeitpunkt: String):Integer
 }
 
 User -- Parkhaus : parkt_in >
 Parkhaus -- AusfahrtSchranke: hat >
 Parkhaus -- Ticketautomat: hat >
 Parkhaus -- Parkdeck : besteht_aus >
+Parkhaus -- Statistik: hat >
+Statistik -- Liste: hat >
 Parkdeck "1..1"- "1..*"Parkplatz: hat >
 Parkhaus "1..1"-"1..*" Liste: hat >
 Liste "1..1"-"0..*" Eintrag: hat >
@@ -47,4 +65,5 @@ Ticket --- User: gehoert_zu >
 User --- Ticket: bezahlt >
 Parkausweis - Abonnent: gehoert_zu >
 User <|- Abonnent
+Manager -- Parkhaus: hat >
 @enduml
