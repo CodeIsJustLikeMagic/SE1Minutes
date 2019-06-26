@@ -1,0 +1,6 @@
+Durch die Digitalisierung von einem Parkhaus werden die Daten, 
+die die Nutzer mit ihrem Verhalten geneierieren in den Vordergrund gebracht.
+Es ist leicher zu erkennen wann in Parkhaus zum Beispiel sehr voll oder sehr leer war.
+Trends wie Wochenends- oder Tägliche Parker können erhoben werden.
+So kann besser optimiert werden wann das Parkhaus für wie lange offen hat.
+

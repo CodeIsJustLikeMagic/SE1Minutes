@@ -1,0 +1,15 @@
+@startuml
+title Default __Auto im Parkhaus parken__
+|#Beige|Kunde|
+start
+:Auto abstellen;
+|#Pink|Zeit messer|
+:Parkzeit messen;
+|Manager|
+:Parkgebuehren festlegen;
+|#AntiqueWhite|Kassierer|
+:Parkgebuehren berechnen;
+|#Beige|Kunde|
+:Parkgebuehren bezahlen;
+stop
+@enduml

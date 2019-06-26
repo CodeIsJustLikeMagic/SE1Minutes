@@ -1,0 +1,35 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor User
+actor Manager
+actor Abonnent
+rectangle Server
+rectangle Schranke
+rectangle Ticketautomat
+rectangle Parkhaus {
+  usecase leaveParkingGarage as "leaveParkingGarage
+  --
+  extention points:\n PaidTicket\n NoPaidTicket"
+  note "Condition:\n {User has a paid ticket}\n Extention point:\n PaidTicket" as pNote
+  note "Condition:\n {User doesn't have a paid ticket}\n Extention point:\n NoPaidTicket" as npNote
+  User -- (getTicket)
+  User <|-- Abonnent
+  Abonnent --- (leaveGarage)
+  (getTicket) -- Schranke
+  User -- (payForTicket)
+  User -- (leaveParkingGarage)
+  (leaveGarage) -- Schranke
+  (leaveParkingGarage) <. pNote : extends
+  (leaveParkingGarage) <. npNote : extends
+  npNote .. (payForTicket)
+  pNote .. (leaveGarage)
+
+  (payForTicket) .> (payment) : include
+  (payForTicket) -- Ticketautomat
+  Manager -- (getRevenue)
+  (getRevenue) --- Server
+  Manager -- (getStatistics)
+  (getStatistics) --- Server
+}
+@enduml

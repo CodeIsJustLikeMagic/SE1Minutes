@@ -1,0 +1,9 @@
+@startuml
+title __Zustandsdiagramm Parkhaus-Ticket__
+[*] --> Gedruckt
+Gedruckt -> Bezahlt : Bezahlung
+Bezahlt -> Abgelaufen : ZeitUEberschreitung
+Abgelaufen ---> Bezahlt : Bezahlung
+Bezahlt -> InSchrankenAutomat : Ausfahren
+InSchrankenAutomat --> [*]
+@enduml

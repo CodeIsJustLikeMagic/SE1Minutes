@@ -1,0 +1,8 @@
+Als Autofahrer benötige ich einen Parkschein um in das Parkhaus hineinfahren zu können.
+Als Betreiber des Parkhauses benötige ich Listen und Summen über die eingenommenen Gebühren und die Anzahl der Autos, um eine Übersicht zu bekommen.
+Als Abonnent des Parkhauses benötige ich einen Ausweis, um ohne Parkschein in das Parkhaus hinein fahren zu können.
+Als Ampel/Anzeigetafel muss ich die Anzahl der Parkplätze kennen, um zu wissen ob noch Platz ist.
+Als Kassenautomat muss ich die Uhrzeit kennen und Zugriff auf die Preislisten haben, um den Preis berechen zu können.
+Als Parkdeck muss ich die Anzahl der geparkten Autos zählen, um festzustellen ob es noch freie Plätze gibt.
+Als Schranke muss ich Tickets entgegennehmen können, um die Schranke zu öffnen (wenn ein Auto das Parkhaus verlassen will).
+Als StatisticSystem muss benötige ich Listen über das Einfahren und Ausfahren von Autos um Statistiken über das Nutzerverhalten zu erstellen
