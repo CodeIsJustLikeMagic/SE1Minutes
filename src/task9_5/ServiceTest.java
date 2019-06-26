@@ -10,6 +10,8 @@ public class ServiceTest {
 	Farbe f;
 	ClassAdapter classAdapter;
 	ObjectAdapter objectAdapter;
+	DynamicAdapter d;
+	Editor e, e2;
 	//StaticAdapter staticAdapter;
 	//DynamicAdapter dynamicAdapter;
 
@@ -18,9 +20,10 @@ public class ServiceTest {
 		Altsystem a = new Altsystem();
 		classAdapter = new ClassAdapter();
 		objectAdapter = new ObjectAdapter(a);
+		d = new DynamicAdapter(a);
 		f = new Farbe("blau");
-		Editor e = new Editor();
-//		Editor e2 = new Editor(new StaticAdapter((f, l) -> a.saveLinie(f,l)));
+		e = new Editor();
+		e2 = new Editor(new StaticAdapter(a));
 	}
 
 	@Test
@@ -31,6 +34,17 @@ public class ServiceTest {
 	@Test
 	public void convertLinieObjectAdapter_LengthInZentimeter_ReturnsLengthInMilimeter() {
 		assertSame(100, objectAdapter.convertLinie(f, 10).milimeter);
+	}
+	
+	@Test
+	public void convertLinieStaticAdapter_LengthInZentimeter_ReturnsLengthInMilimeter() {
+		assertSame(100, e2.saveLinieStaticAdapter(f, 10).milimeter);
+	}
+	
+	@Test
+	public void convertLinieDynamicAdapter_LengthInZentimeter_ReturnsLengthInMilimeter() {
+		e.setAdapter(d);
+		assertSame(100, e.saveLinieDynamicAdapter(f, 10).milimeter);
 	}
 
 }

@@ -1,11 +1,16 @@
 package task9_5;
 
-public class StaticAdapter{
+public class StaticAdapter implements StaticIF<Farbe, Integer, Linie>{
 	
-	public StaticIF<Farbe, Linie> staticFunction;
+	public Altsystem system;
 	
-	public StaticAdapter(StaticIF<Farbe, Linie> function) {
-		 staticFunction = function;
+	public StaticAdapter(Altsystem a) {
+		 system = a;
+	}
+
+	@Override
+	public Linie apply(Farbe t, Integer g) {
+		return system.saveLinie(t, g * 10);
 	}
 
 

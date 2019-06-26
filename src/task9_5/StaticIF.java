@@ -1,8 +1,8 @@
 package task9_5;
 
 @FunctionalInterface
-public interface StaticIF<T, R> {
+public interface StaticIF<T, G, R> {
 	
-	R apply(T t);
+	R apply(T t, G g);
 
 }
