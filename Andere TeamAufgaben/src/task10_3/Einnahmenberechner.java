@@ -10,5 +10,9 @@ public class Einnahmenberechner extends Einnahmen {
 		}
 		return res;
 	}
+	
+	public Einnahmenberechner(Statistics stats) {
+		this.stats = stats;
+	}
 
 }

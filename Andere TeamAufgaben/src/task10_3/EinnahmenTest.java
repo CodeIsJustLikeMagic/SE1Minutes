@@ -17,7 +17,6 @@ class EinnahmenTest {
 
 	@BeforeEach
 	void setUp() throws Exception {
-		e = new Einnahmenberechner();
 		 SimpleDateFormat dateformat2 = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
 		 
 	        String strdate2 = "02-04-2019 11:35:42";
@@ -34,11 +33,12 @@ class EinnahmenTest {
 	        }
 		ParkedCar[] p = new ParkedCar[] {new ParkedCar("Red", start, end, 10d)};
 		stats = new Statistics(p);
+		e = new Einnahmenberechner(stats);
 	}
 
 	@Test
 	void getRevenue_1Car1Day_returns10() {
-		assertEquals(e.getRevenue(start, end), 10d);
+		assertEquals(10d, e.getRevenue(start, end));
 	}
 
 }

@@ -4,7 +4,7 @@ import java.util.Date;
 
 public abstract class Einnahmen{
 	
-	private Statistics stats;
+	protected Statistics stats;
 
 	final public double getRevenue(Date start, Date end) {
 		return calculateRevenue(getStats(start, end));
@@ -13,7 +13,6 @@ public abstract class Einnahmen{
 	abstract protected double calculateRevenue(ParkedCar[] stats);
 
 	private ParkedCar[] getStats(Date start, Date end) {
-		// TODO Auto-generated method stub
 		return stats.getCars(start, end);
 	}
 

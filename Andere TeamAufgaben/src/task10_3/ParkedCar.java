@@ -10,6 +10,9 @@ public class ParkedCar {
 	
 	public ParkedCar(String car, Date in, Date out, double pricePayed)
 	{
-		
+		this.car = car;
+		this.in = in;
+		this.out = out;
+		this.pricePayed = pricePayed;
 	}
 }
