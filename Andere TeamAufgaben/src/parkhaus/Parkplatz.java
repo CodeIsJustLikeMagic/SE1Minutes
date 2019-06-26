@@ -1,6 +1,8 @@
 package parkhaus;
 
-public class Parkplatz {
+import parkhaus_Interfaces.ParkplatzIF;
+
+public class Parkplatz implements ParkplatzIF{
 	
 	private boolean belegt;
 	

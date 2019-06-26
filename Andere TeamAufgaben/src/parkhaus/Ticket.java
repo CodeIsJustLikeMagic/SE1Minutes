@@ -1,6 +1,8 @@
 package parkhaus;
 
-public class Ticket {
+import parkhaus_Interfaces.TicketIF;
+
+public class Ticket implements TicketIF{
 	
 	private String einfahrtzeit;
 	private boolean bezahlt;

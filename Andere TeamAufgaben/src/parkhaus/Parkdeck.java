@@ -1,6 +1,8 @@
 package parkhaus;
 
-public class Parkdeck {
+import parkhaus_Interfaces.ParkdeckIF;
+
+public class Parkdeck implements ParkdeckIF{
 	
 	private int belegtePlaetze;
 	private Parkplatz[] parkplaetze;

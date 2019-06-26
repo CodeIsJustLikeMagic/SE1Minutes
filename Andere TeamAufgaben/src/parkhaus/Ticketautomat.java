@@ -1,6 +1,8 @@
 package parkhaus;
 
-public class Ticketautomat {
+import parkhaus_Interfaces.TicketautomatIF;
+
+public class Ticketautomat implements TicketautomatIF{
 	
 	double parkgebuehr;
 

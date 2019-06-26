@@ -1,6 +1,8 @@
 package parkhaus;
 
-public class Eintrag {
+import parkhaus_Interfaces.EintragIF;
+
+public class Eintrag implements EintragIF{
 	
 	enum Wochentag{
 		MO,

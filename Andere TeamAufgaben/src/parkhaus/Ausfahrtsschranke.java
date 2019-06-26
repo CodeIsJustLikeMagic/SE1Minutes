@@ -1,6 +1,8 @@
 package parkhaus;
 
-public class Ausfahrtsschranke {
+import parkhaus_Interfaces.AusfahrtsschrankeIF;
+
+public class Ausfahrtsschranke implements AusfahrtsschrankeIF{
 	
 	private Parkhaus parkhaus;
 	

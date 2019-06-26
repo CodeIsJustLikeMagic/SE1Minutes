@@ -2,7 +2,9 @@ package parkhaus;
 
 import java.util.ArrayList;
 
-public class Statistik {
+import parkhaus_Interfaces.StatistikIF;
+
+public class Statistik implements StatistikIF{
 	
 	ArrayList<Eintrag> stats;
 	
@@ -31,9 +33,10 @@ public class Statistik {
 	public static String getCurrentTime() {
 		return time;
 	}
-	
 	public static int convertTime(String time) {
 		return Integer.parseInt(time);
 	}
+	
+
 
 }

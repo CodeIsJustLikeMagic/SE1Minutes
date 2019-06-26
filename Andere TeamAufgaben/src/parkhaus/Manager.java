@@ -1,6 +1,8 @@
 package parkhaus;
 
-public class Manager {
+import parkhaus_Interfaces.ManagerIF;
+
+public class Manager implements ManagerIF{
 
 	Parkhaus parkhaus;
 	

@@ -1,6 +1,8 @@
 package parkhaus;
 
-public class User {
+import parkhaus_Interfaces.UserIF;
+
+public class User implements UserIF{
 	
 	private int number;
 	private Ticket ticket;

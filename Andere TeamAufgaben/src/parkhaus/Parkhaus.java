@@ -2,7 +2,9 @@ package parkhaus;
 
 import java.util.Arrays;
 
-public class Parkhaus {
+import parkhaus_Interfaces.ParkhausIF;
+
+public class Parkhaus implements ParkhausIF{
 	
 	private String name;
 	private int nr;
@@ -13,6 +15,7 @@ public class Parkhaus {
 	private Ausfahrtsschranke schranke;
 	private Ticketautomat ticketautomat;
 	private double parkgebuehr;
+	private double subscriptionCost;
 	
 	public int durchschnittParkdauer() {
 		return 0;
@@ -30,7 +33,7 @@ public class Parkhaus {
 		return 0d;
 	}
 	
-	public Parkhaus(String name, int nr, Parkdeck[] parkdecks, double parkgebuehr) {
+	public Parkhaus(String name, int nr, Parkdeck[] parkdecks, double parkgebuehr, double subscriptionCost) {
 		this.setName(name);
 		this.setNr(nr);
 		this.setParkdecks(parkdecks);
@@ -40,6 +43,7 @@ public class Parkhaus {
 		setStats(new Statistik());
 		setSchranke(new Ausfahrtsschranke(this));
 		this.setParkgebuehr(parkgebuehr);
+		this.subscriptionCost = subscriptionCost;
 		setTicketautomat(new Ticketautomat(parkgebuehr));
 	}
 
@@ -95,11 +99,11 @@ public class Parkhaus {
 		this.nr = nr;
 	}
 	
-	public Parkausweis CreateParkausweis() {
-		return new Parkausweis();
+	public Parkausweis createParkausweis() {
+		return new Parkausweis(subscriptionCost);
 	}
 	
-	public Ticket CreateTicket() {
+	public Ticket createTicket() {
 		return new Ticket();
 	}
 
