@@ -18,9 +18,11 @@ node Server {
   package Statistics {
     [Car Counter]
     [parkPrices] -- [PriceCalculator]
+    [usageStatistics]
   }
 }
 CF --- [Car Counter]
 [Parkhaus] -right-( CF
 CF --- [PriceCalculator]
+CF --- [usageStatistics]
 @enduml

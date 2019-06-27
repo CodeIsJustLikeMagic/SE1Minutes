@@ -1,0 +1,13 @@
+Für die erste Iteration Zunächst haben wir uns auf die grundlegende Funktionalität des Parkhauses konzentriert.
+Dazu haben wir ein Parkhaus Projekt aus dem Makerspace erstellt.
+Dieses konnte Autos ein und ausfahren lassen.
+
+Zur zweiten Iteration haben wir die Funktionalität der Aufzeichung der Daten in einer Liste hinzugefügt.
+Dabei werden alle Autos die zur aktuellen Zeit im Parkhaus sind aufgelistet. 
+Außerdem wird der gesammtpreis angezeigt den alle Autos beim herausfahren bezahlt haben,
+ sowie der durchschnittliche Preis den die Autos zahlen angezeigt.
+
+Zur dritten Iteration haben wir das Projekt auf die neue version aus dem Makerspace angehoben.
+
+Zur vierten Iteration planen wir die Statistische Auswertung von der Parkhausnutzung zu erweitern. 
+Es soll erfasst zu welchem Wochentag und welcher Uhrzeit statistisch gesehen die meisten und die wenigsten Autos parken. 
