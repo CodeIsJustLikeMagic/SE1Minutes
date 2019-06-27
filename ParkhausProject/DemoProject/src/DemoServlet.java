@@ -19,7 +19,6 @@ public class DemoServlet extends HttpServlet {
      */
     public DemoServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
@@ -63,8 +62,8 @@ public class DemoServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Float sum = getPersistentSum();
-		Float ave = getPersistentAverage();
+		float sum = getPersistentSum();
+		float ave = getPersistentAverage();
 		int tAve = getPersistentTAve();
 		int sti = getPersistentShortestTime();
 		int cars = getPersistentAmountCars();

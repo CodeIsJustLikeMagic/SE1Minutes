@@ -15,10 +15,23 @@ public class Editor {
 		
 	}
 	
+	public Linie saveLinieStaticAdapter(Farbe farbe, int zentimeter) {
+		return staticAdapter.apply(farbe, zentimeter);
+	}
+	
+	public Linie saveLinieDynamicAdapter(Farbe farbe, int zentimeter) {
+		return dynamicAdapter.apply(farbe, zentimeter);
+	}
+	
 	public Editor(StaticAdapter staticAdapter) {
 		this.staticAdapter = staticAdapter;
 	}
 	
+	public Editor(Object object) {
+		// TODO Auto-generated constructor stub
+	}
+
+
 	public void setAdapter(DynamicAdapter dynamicAdapter) {
 		this.dynamicAdapter = dynamicAdapter;
 	}
