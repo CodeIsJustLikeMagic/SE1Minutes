@@ -11,5 +11,6 @@
 	<classpathentry kind="lib" path="D:/Meine Dateien/Studium/4. Semester/Software Engineering 1/SE1Minutes/servlet-api-2.3.jar"/>
 	<classpathentry kind="lib" path="D:/Meine Dateien/Studium/4. Semester/Software Engineering 1/javax.servlet-api-3.0.1.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="/SE1MinutesCode"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
