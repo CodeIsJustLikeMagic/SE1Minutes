@@ -19,5 +19,5 @@ Willkommmen zu unserem SE1 Projekt. Alle Diagramme liegen auch in PlantUML vor u
 * [Zielkonflikte]()
 * [Iterationsbericht](https://github.com/CodeIsJustLikeMagic/SE1Minutes/blob/master/Projekt%20Diagramme/16%20Iterationsbericht.txt)
 *[Summarisches Projektprotokoll]()
-*[Resumée und Fazit]()
-* [Präsentation]()
+*[Resumée und Fazit](https://github.com/CodeIsJustLikeMagic/SE1Minutes/blob/master/Projekt%20Diagramme/18%20Resumee%20und%20Fazit.txt)
+* [Präsentation](https://github.com/CodeIsJustLikeMagic/SE1Minutes/blob/master/Projekt%20Diagramme/19%20Pr%C3%A4sentation%20und%20Demo.pptx)
