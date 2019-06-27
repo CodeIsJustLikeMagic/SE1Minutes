@@ -7,4 +7,5 @@ public interface ParkhausIF {
 	
 	public Ticket createTicket();
 	public Parkausweis createParkausweis();
+	public void calcBelegtePlaetze();
 }

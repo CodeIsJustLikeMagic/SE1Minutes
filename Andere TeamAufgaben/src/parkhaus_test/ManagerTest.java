@@ -11,9 +11,4 @@ class ManagerTest {
 	void setUp() throws Exception {
 	}
 
-	@Test
-	void test() {
-		fail("Not yet implemented");
-	}
-
 }

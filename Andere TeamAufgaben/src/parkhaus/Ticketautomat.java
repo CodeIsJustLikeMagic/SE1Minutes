@@ -14,7 +14,8 @@ public class Ticketautomat implements TicketautomatIF{
 		if(ticket.isBezahlt()) {
 			return 0;
 		}
-		int time = (Statistik.convertTime(Statistik.getCurrentTime()) - Statistik.convertTime(ticket.getEinfahrtzeit())) /3600;
+		int time = (Statistik.convertTime(Statistik.getCurrentTime()) - (Statistik.convertTime(ticket.getEinfahrtzeit())));
+		System.out.println(Statistik.convertTime(ticket.getEinfahrtzeit()));
 		return time * parkgebuehr;
 	}
 	

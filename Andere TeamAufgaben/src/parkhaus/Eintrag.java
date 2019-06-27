@@ -4,7 +4,7 @@ import parkhaus_Interfaces.EintragIF;
 
 public class Eintrag implements EintragIF{
 	
-	enum Wochentag{
+	public enum Wochentag{
 		MO,
 		DI,
 		MI,

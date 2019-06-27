@@ -33,18 +33,36 @@ public class Parkhaus implements ParkhausIF{
 		return 0d;
 	}
 	
-	public Parkhaus(String name, int nr, Parkdeck[] parkdecks, double parkgebuehr, double subscriptionCost) {
+	public Parkhaus(String name, int nr, int parkdecks, int parkplaetzeProDeck, double parkgebuehr, double subscriptionCost, int belegtePlaetze) {
 		this.setName(name);
 		this.setNr(nr);
-		this.setParkdecks(parkdecks);
-		belegtePlaetze = 0;
-		this.increaseBelegtePlaetze(Arrays.asList(parkdecks).stream().filter(p -> p.getBelegtePlaetze() > 0).map(p -> p.getBelegtePlaetze()).reduce(0,  Integer::sum));
+		this.belegtePlaetze = belegtePlaetze;
+		Parkdeck[] p = new Parkdeck[parkdecks];
+		int remaining = belegtePlaetze;
+		for(int i = 0; i < parkdecks; i++) {
+			if(remaining > parkplaetzeProDeck) {
+				p[i] = new Parkdeck(parkplaetzeProDeck, parkplaetzeProDeck, this);
+				remaining -= parkplaetzeProDeck;
+			}
+			else if(remaining > 0){
+				p[i] = new Parkdeck(parkplaetzeProDeck, remaining, this);
+				remaining = 0;
+			}
+			
+		}
+		this.setParkdecks(p);
+
+		this.increaseBelegtePlaetze(Arrays.asList(this.parkdecks).stream().filter(pd -> pd.getBelegtePlaetze() > 0).map(pd -> pd.getBelegtePlaetze()).reduce(0,  Integer::sum));
 		this.setSchrankeoeffnet(false);
 		setStats(new Statistik());
 		setSchranke(new Ausfahrtsschranke(this));
 		this.setParkgebuehr(parkgebuehr);
 		this.subscriptionCost = subscriptionCost;
 		setTicketautomat(new Ticketautomat(parkgebuehr));
+	}
+
+	public Parkhaus() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public int getBelegtePlaetze() {
@@ -130,5 +148,13 @@ public class Parkhaus implements ParkhausIF{
 	public void setSchranke(Ausfahrtsschranke schranke) {
 		this.schranke = schranke;
 	}
+
+	@Override
+	public void calcBelegtePlaetze() {
+		this.increaseBelegtePlaetze(Arrays.asList(this.parkdecks).stream().filter(pd -> pd.getBelegtePlaetze() > 0).map(pd -> pd.getBelegtePlaetze()).reduce(0,  Integer::sum));
+		
+	}
+	
+	
 
 }

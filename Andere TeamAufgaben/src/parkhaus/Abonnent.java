@@ -10,7 +10,7 @@ public class Abonnent extends User implements AbonnentIF{
 
 	@Override
 	public void paySubscription(double amount) {
-		// TODO Auto-generated method stub
+		((Parkausweis) this.getTicket()).extendExpirationDate(amount);
 		
 	}
 

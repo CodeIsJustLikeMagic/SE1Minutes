@@ -4,13 +4,13 @@ public interface StatistikIF {
 	
 
 	
-	public int durchschnittlicheParkdauer();
+	public double durchschnittlicheParkdauer();
 	
 	public String meistbesuchteZeit();
 	
 	public String wenigstbesuchteZeit();
 	
-	public double einnahmen(String anfang, String ende);
+	public double einnahmen(int anfang, int ende);
 	
 
 

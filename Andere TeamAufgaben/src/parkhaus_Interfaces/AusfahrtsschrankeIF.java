@@ -4,6 +4,6 @@ import parkhaus.Ticket;
 
 public interface AusfahrtsschrankeIF {
 	
-	public void autoRauslassen(Ticket ticket);
+	public boolean autoRauslassen(Ticket ticket);
 
 }
