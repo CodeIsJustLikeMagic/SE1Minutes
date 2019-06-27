@@ -1,1 +1,2 @@
-Wir haben keine Patterns eingesetzt.
+Zum momentanen Zeitpunkt verwenden wir keine Patterns (abgesehen von enums bei denen es sich ja um Singletons handelt).
+Allerdings bestand der Plan, die in der Hausaufgabe programmierten Multitons zu verwenden. Leider hat dazu die Zeit nicht mehr gereicht.
