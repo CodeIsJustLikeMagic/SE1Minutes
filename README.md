@@ -5,7 +5,7 @@ Willkommmen zu unserem SE1 Projekt. Alle Diagramme liegen auch in PlantUML vor u
 * [Digitalisierungskonzept](https://github.com/CodeIsJustLikeMagic/SE1Minutes/blob/master/Projekt%20Diagramme/01%20Digitalisierungskonzept.txt)
 * [User Stories](https://github.com/CodeIsJustLikeMagic/SE1Minutes/blob/master/Projekt%20Diagramme/02%20User%20Stories.txt)
 * [KanbanBoard](https://github.com/CodeIsJustLikeMagic/SE1Minutes/blob/master/Projekt%20Diagramme/03%20Kanban%20Board.xlsx)
-*[Priorisierung der UserStories](https://github.com/CodeIsJustLikeMagic/SE1Minutes/blob/master/Projekt%20Diagramme/04%20Priorisierung%20der%20User%20Stories.txt)
+* [Priorisierung der UserStories](https://github.com/CodeIsJustLikeMagic/SE1Minutes/blob/master/Projekt%20Diagramme/04%20Priorisierung%20der%20User%20Stories.txt)
 * [UML Use Case-Diagram](https://github.com/CodeIsJustLikeMagic/SE1Minutes/blob/master/Projekt%20Diagramme/05_2%20Use%20Case%20Diagramm.PNG)
 * [Robustheitsdiagramm](https://github.com/CodeIsJustLikeMagic/SE1Minutes/blob/master/Projekt%20Diagramme/06_2%20Robustheitsanalyse.png)
 * [UML Klassendiagramme](https://github.com/CodeIsJustLikeMagic/SE1Minutes/blob/master/Projekt%20Diagramme/07_2%20Klassendiagramm.png)
