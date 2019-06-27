@@ -3,14 +3,13 @@ skinparam classAttributeIconSize 0
 class Parkhaus {
   -name: String
   -nr: Integer
-  -ampel: String
   -belegtePlaetze: Integer
   -schrankeoeffnet:Boolean
   
-    +durchschnittParkdauer(): Integer
+    +durchschnittParkdauer(): double
     +meistbesuchteZeit(): String
     +wenigstbesuchteZeit(): String
-    +einnahmen(zeitpunkt: String, zeitpunkt: String):Integer
+    +einnahmen(zeitpunkt: String, zeitpunkt: String):Double
 }
 class AusfahrtSchranke{
   +autoRauslassen(t: Ticket)
@@ -43,10 +42,10 @@ class Ticket{
   
 }
 class Statistik{
-    +durchschnittParkdauer(): Integer
+    +durchschnittParkdauer(): double
     +meistbesuchteZeit(): String
     +wenigstbesuchteZeit(): String
-    +einnahmen(zeitpunkt: String, zeitpunkt: String):Integer
+    +einnahmen(zeitpunkt: String, zeitpunkt: String):double
 }
 
 User -- Parkhaus : parkt_in >
