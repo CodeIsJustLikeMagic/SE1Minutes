@@ -13,7 +13,7 @@ Willkommmen zu unserem SE1 Projekt. Alle Diagramme liegen auch in PlantUML vor u
 * [UML Aktivitätsdiagramme](https://github.com/CodeIsJustLikeMagic/SE1Minutes/blob/master/Projekt%20Diagramme/09%20Aktivit%C3%A4tsdiagramm%20Parkhaus%20mit%20Schwimmbahnen.png)
 * [UML Verteilungsdiagramm (deployment diagram)](https://github.com/CodeIsJustLikeMagic/SE1Minutes/blob/master/Projekt%20Diagramme/10%20Deployment%20Diagram%20Parkhaus.png)
 * [Java - Interfaces](https://github.com/CodeIsJustLikeMagic/SE1Minutes/tree/master/ParkhausProject/DemoProject/src/parkhaus_Interfaces)
-*[lauffähige JUnit-Tests](https://github.com/CodeIsJustLikeMagic/SE1Minutes/tree/master/ParkhausProject/DemoProject/src/parkhaus_test)
+* [lauffähige JUnit-Tests](https://github.com/CodeIsJustLikeMagic/SE1Minutes/tree/master/ParkhausProject/DemoProject/src/parkhaus_test)
 * [lauffähige Java - Klassen](https://github.com/CodeIsJustLikeMagic/SE1Minutes/tree/master/ParkhausProject/DemoProject/src/parkhaus)
 * [Verzeichnis der eingesetzten Patterns](https://github.com/CodeIsJustLikeMagic/SE1Minutes/blob/master/Projekt%20Diagramme/14%20Verzeichnis%20der%20eingesetzten%20Patterns.txt)
 * [Zielkonflikte]()
