@@ -1,0 +1,5 @@
+Die meiste Zeit ist in die Planung und das erstellen der Diagramme geflossen.
+
+Für die Implementation haben wir verhältnismäßig wenig Zeit gehabt.
+
+Für die JUnit Tests haben wir etwa 5 Stunden gebraucht.

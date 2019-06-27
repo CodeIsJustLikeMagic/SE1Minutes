@@ -1,0 +1,9 @@
+Konflikt zwischen Dependency Inversion Principle (DIP) und zwischen dem Prinzip der minimalen Verwunderung.
+
+Wir möchten Module niedrigerer Ebene direkt verwenden (ohne ein Interface) um minimale Verwunderung zu wahren und Zeiteffizient zu sein.
+Dies verstößt jedoch gegen das Dependency Inversion Principle.
+
+Lösung:
+Wir haben für die Module Interfaces erstellt und diese in den JUnit tests verwendet. Wenn die Klassen untereinander 
+Interagieren tuen sie dies jedoch ohne Interfaces.
+So kann die Funktionalität des Codes verändert werden ohne das die JUnit tests angepasst werden müssen.
